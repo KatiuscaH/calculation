@@ -8,7 +8,7 @@ function App() {
   }]);
   const [initialDestination, setInitialDestination] = useState('')
   const [vehicleType, setVehicleType] = useState('');
-  const [ totalExpense, setTotalExpense ] = useState('')
+  const [totalExpense, setTotalExpense] = useState('')
 
   const addAdditionalDestination = (e: any) => {
     e.preventDefault();
@@ -34,8 +34,8 @@ function App() {
     let fullString = '';
     let b = ''
     additionalDestinitationValues.map((destination) => {
-    fullString += '-' + destination.value 
-    return fullString
+      fullString += '-' + destination.value
+      return fullString
     }).join('-')
     b = initialDestination + fullString
     setTotalExpense(b)
@@ -65,7 +65,7 @@ function App() {
       </div>
       <div>
         <label htmlFor='vehicle_type'>Vehicle Type</label>
-        <select value={vehicleType} onChange={(e) => {setVehicleType(e.target.value)}}>
+        <select value={vehicleType} onChange={(e) => { setVehicleType(e.target.value) }}>
           <option value='Car'>
             Car
           </option>
@@ -79,10 +79,10 @@ function App() {
       </div>
       <div>
         <label htmlFor="expense_name">Expense Name</label>
-        <input placeholder='Berlin - Paris' type='text' id='expense_name' value={totalExpense}/>
+        <input placeholder='Berlin - Paris' type='text' id='expense_name' value={totalExpense} />
       </div>
       <div>
-        <p>Total Amount: $ {Math.random()*1000}</p>
+        <p>Total Amount: $ {Math.random() * 1000}</p>
       </div>
       <div>
         <button type='submit'>Submit</button>
